@@ -1,0 +1,18 @@
+# .air.toml
+
+root = "."
+tmp_dir = "tmp"
+
+[build]
+# perintah build: compile main dari cmd/httpsrv
+cmd = "go build -o ./tmp/main ./cmd/httpsrv"
+# binary yang akan dijalankan
+bin = "tmp/main"
+# environment ketika jalanin binary (opsional)
+full_bin = "APP_ENV=development ./tmp/main"
+
+include_ext = ["go"]
+include_dir = ["cmd", "internal"]
+exclude_dir = ["tmp", "vendor"]
+
+delay = 1000 # ms, debounce waktu file-change

@@ -1,0 +1,12 @@
+export enum StoreStatus {
+  ACTIVE = "ACTIVE",
+  INACTIVE = "INACTIVE",
+}
+
+export enum PTENStatus {
+  INVALID = "INVALID",
+  COMPLETED = "COMPLETED",
+  PENDING_RESULT = "PENDING_RESULT",
+  READY_REGISTER = "READY_REGISTER",
+  ONHOLD = "ONHOLD",
+}
