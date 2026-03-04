@@ -15,6 +15,8 @@ export type StudentItem = {
 export type ClassOption = {
   id: string;
   name: string;
+  year?: string;
+  homeroom?: string;
 };
 
 export type CreateStudentPayload = {

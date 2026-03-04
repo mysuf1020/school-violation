@@ -16,6 +16,7 @@ import {
 const LINKS = [
   { href: "/admin/dashboard", label: "Dashboard", icon: LayoutDashboard },
   { href: "/admin/students", label: "Siswa", icon: Users },
+  { href: "/admin/classes", label: "Kelas", icon: Users }, // Reusing Users icon or we can use another one
   { href: "/admin/violations", label: "Pelanggaran", icon: ShieldCheck },
   { href: "/admin/violation-types", label: "Jenis Pelanggaran", icon: ScrollText },
   { href: "/admin/sanction-rules", label: "Aturan Sanksi", icon: Scale },

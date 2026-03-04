@@ -10,3 +10,14 @@ export async function fetchClasses() {
 
   return list as ClassOption[];
 }
+
+export interface CreateClassPayload {
+  name: string;
+  year?: string;
+  homeroom?: string;
+}
+
+export async function createClass(payload: CreateClassPayload) {
+  const res = await api.post("/admin/classes", payload);
+  return res.data;
+}
