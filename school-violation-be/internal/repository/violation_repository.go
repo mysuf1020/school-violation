@@ -49,6 +49,7 @@ func (r *violationRepository) List(ctx context.Context) ([]model.Violation, erro
 		Preload("ViolationType").
 		Preload("SanctionRule").
 		Preload("CreatedByUser").
+		Order("occurred_at DESC, created_at DESC").
 		Find(&items).Error; err != nil {
 		return nil, err
 	}

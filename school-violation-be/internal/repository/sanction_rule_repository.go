@@ -25,8 +25,8 @@ func NewSanctionRuleRepository(db *gorm.DB) SanctionRuleRepository {
 func (r *sanctionRuleRepository) FindForPoint(ctx context.Context, totalPoint int) (*model.SanctionRule, error) {
 	var rule model.SanctionRule
 	err := r.db.WithContext(ctx).
-		Where("? BETWEEN min_point AND max_point", totalPoint).
-		Order("min_point ASC").
+		Where("min_point <= ?", totalPoint).
+		Order("min_point DESC").
 		First(&rule).Error
 
 	if err == gorm.ErrRecordNotFound {
