@@ -14,8 +14,8 @@ export function StudentTable() {
     error instanceof Error
       ? error.message
       : error
-      ? "Gagal memuat data siswa."
-      : "";
+        ? "Gagal memuat data siswa."
+        : "";
 
   return (
     <Card className="p-4">
@@ -82,11 +82,11 @@ export function StudentTable() {
                     {s.gender === "L"
                       ? "Laki-laki"
                       : s.gender === "P"
-                      ? "Perempuan"
-                      : s.gender || "-"}
+                        ? "Perempuan"
+                        : s.gender || "-"}
                   </td>
                   <td className="px-3 py-2 border-b border-slate-100">
-                    {s.class?.name ?? "-"}
+                    {s.class_name ?? "-"}
                   </td>
                   <td className="px-3 py-2 border-b border-slate-100">
                     {s.total_point ?? 0}

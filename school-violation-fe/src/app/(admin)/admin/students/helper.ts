@@ -5,10 +5,8 @@ export type StudentItem = {
   gender: string;
   total_point?: number;
   is_active?: boolean;
-  class?: {
-    id: string;
-    name: string;
-  };
+  class_id?: string;
+  class_name?: string;
   created_at?: string;
 };
 

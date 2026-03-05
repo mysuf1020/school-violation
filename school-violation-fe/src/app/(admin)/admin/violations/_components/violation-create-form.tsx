@@ -89,7 +89,7 @@ export function ViolationCreateForm() {
               <option value="">Pilih siswa</option>
               {students.map((s: StudentItem) => (
                 <option key={s.id} value={s.id}>
-                  {s.name} {s.class?.name ? `- ${s.class.name}` : ""}
+                  {s.name} {s.class_name ? `- ${s.class_name}` : ""}
                 </option>
               ))}
             </select>
